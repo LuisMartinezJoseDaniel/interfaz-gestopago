@@ -1,0 +1,23 @@
+server:
+  port: 8080
+spring:
+  application:
+    name: interfaz-gestopago
+  datasource:
+    url: jdbc:mysql://134.209.6.247:3306/bbva_altan_test
+    username: root
+    password: c8e01a258fde70ac97d1e761ce6a32ab6007b05e35467027
+    driver-class-name: com.mysql.cj.jdbc.Driver
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+  rabbitmq:
+    addresses: localhost:5672
+rabbitmq:
+  exchanges:
+    internal: internal.exchange
+  queue:
+    notification: notification.queue
+  routing-keys:
+    internal-notification: internal.notification.routing-key
