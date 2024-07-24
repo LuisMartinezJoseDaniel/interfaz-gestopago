@@ -6,7 +6,7 @@ import jakarta.validation.constraints.NotBlank;
 public record BBVARequest(
         @NotBlank(message = "mt es requerido")
         String mt,
-        @NotBlank
+        @NotBlank(message = "dn es requerido")
         @PhoneNumber(message = "dn debe ser un número de teléfono válido de 10 dígitos")
         String dn,
         @NotBlank(message = "pesos es requerido")

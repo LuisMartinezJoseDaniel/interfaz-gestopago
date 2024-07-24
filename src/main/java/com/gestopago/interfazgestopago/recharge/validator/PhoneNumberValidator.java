@@ -7,7 +7,7 @@ import java.util.regex.Pattern;
 
 public class PhoneNumberValidator implements ConstraintValidator<PhoneNumber, String> {
     
-    private static final String PHONE_NUMBER_PATTERN = "^\\+?[0-9. ()-]{7,25}$";
+    private static final String PHONE_NUMBER_PATTERN = "^\\+?[0-9. ()-]{10}$";
     
     @Override
     public void initialize(PhoneNumber constraintAnnotation) {
